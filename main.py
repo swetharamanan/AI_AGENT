@@ -1,6 +1,6 @@
 from browser import start_browser
 from parser import extract_elements
-from llm import ask_gemini
+# from llm import ask_gemini
 from executor import execute
 from executor import handle_cookies   # 👈 add this
 from executor import handle_cookies, open_date_picker, select_date , select_flights_tab,handle_popups
@@ -73,8 +73,9 @@ def run_agent(task, url):
         print(f"\n--- Step {step} ---")
 
         elements = extract_elements(page)
+    
 
-        decision = ask_gemini(task, elements, history)
+        decision = "ask_gemini"
         print("decisionssss------------>",decision)
 
         print("Decision:", decision)
